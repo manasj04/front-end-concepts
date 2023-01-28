@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load css async</title>
+    <link rel="stylesheet" href="nonCritical.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="critical.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    -> critical.css is important for website, other two are not that imp even if they are downloaded later.
+    nonCritical, style, critical -> order of fetching the files in network tab and rendering will be blocked
+    (coz by-default css is render blocking source i.e. browser wont render any processed content until CSSOM is constructed)
+
+    -> larger the css, larger fetch time, large render blocking period. Hence it is adviced to divide css into multiple css files and
+    keep critical content in one separate file.
+-->

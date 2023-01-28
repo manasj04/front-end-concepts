@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without preload,prefetch and preconnect</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <a href="index3.html">index3.html</a>
+</body>
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+</html>
+
+<!-- 
+    (preload) index.html,style1.css,style2.css,script1.js,script2.js -> this is the order browser download these files. It assigns some default priority to assets depending upon asset type. 
+    (prefetch) click on index3.html link -> index3.html and script3.js will be loaded after we clicked the link.(i.e. it consumes lot of time and memory in loading)
+-->
