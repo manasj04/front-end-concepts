@@ -41,7 +41,7 @@ const user = fetch(GITHUB_API);
 //data returned in immutable, nobody can modify wherever passed
 
 user.then(function(data){
-    return data.json()
+    return data.json();
 }).then(function(data){
     console.log(data);
 });
