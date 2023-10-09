@@ -54,7 +54,7 @@ user.then(function(data){
 
 //producer
 function createOrder(cart){
-    const promise = new Promise(function(resolved, reject){
+    const promise = new Promise(function(resolve, reject){
         //our async opertaion whatever we want to do will come here. ex below
 
         if(!valid(cart)){
@@ -64,7 +64,7 @@ function createOrder(cart){
         //logic for getting orderId from backend
         const id = '1234';
         if(id){
-            resolved(id);
+            resolve(id);
         }
     });
     return promise;
