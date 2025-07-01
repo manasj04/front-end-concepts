@@ -213,6 +213,7 @@ let myId2 = setIntervalPollyfill(function(name){
 }, 1000, "Manas");
 
 //bind
+//read call, apply and bind before this
 const name = {
     firstName : "Manas",
     lastName : "Jain"

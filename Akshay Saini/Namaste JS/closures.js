@@ -40,15 +40,53 @@
 // z();
 
 //Interesting interview ques https://youtu.be/eBTBG4nda2A
+function x(){
+    for(var i=1;i<=5;i++){
+        function close(x){
+            setTimeout(function(){
+                console.log(x);
+            }, x*1000);
+        }
+        close(i);
+    }
+    console.log("Here");
+}
+
+x();
+
 // function x(){
 //     for(var i=1;i<=5;i++){
-//         setTimeout(function(){
-//             console.log(i);
-//         }, i*1000);
+//         function close(){
+//             var j = i;
+//             setTimeout(function(){
+//                 console.log(j);
+//             }, j*1000);
+//         }
+//         close();
 //     }
 //     console.log("Here");
 // }
 
 // x();
 
-//solution to above are 1.use let 2.closure fn 
+//advandatges of closures
+//1. Memoization
+//2. Data hiding/encapsulation
+
+//Data hiding/encapsulation
+//in below code anyone can change the value of counter, its not hidden or protected
+// var counter = 0;
+// function increment(){
+//     counter++;
+// }
+
+//solution using closure
+// function counter() {
+//   var count = 0;
+//   return function increment() {
+//     count++;
+//   }
+// }
+
+//disadvantages of closures
+//1. Overconsumption of memory - because closed values are not garbage collected, this can lead to memory leaks

@@ -83,3 +83,31 @@ order.then(function(id){
     console.log(err);
     console.log(err.message);
 })
+
+//promise APIs
+// 1. Promise.all -> waits for all promises to be resolved, as soon as if any one is rejected, it will be rejected.
+// O/P if all are resolved -> Result of all promises in array
+// O/P if any one is rejected -> Error of that promise
+
+// Promise.all([promise1, promise2, promise3]).then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err);
+// });
+
+// 2. Promise.allSettled -> waits for all promises to be settled, i.e. either resolved or rejected.
+// O/P -> Array of objects, each object will have status and value/error.
+
+// 3. Promise.race -> waits for any one promise to be settled, i.e. either resolved or rejected.
+// O/P if any one is settled -> Result of that promise i.e. value/error.
+
+// 4. Promise.any -> waits for any one promise to be resolved, as soon as if any one is resolved, it will be resolved. If all are rejected, then only it will be rejected.
+// O/P if any one is resolved -> Result of that promise.
+// O/P if all are rejected -> AggregateError.
+
+// Promise.any([promise1, promise2, promise3]).then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err); -> AggregateError
+//     console.log(err.errors); -> Array of all errors
+// });

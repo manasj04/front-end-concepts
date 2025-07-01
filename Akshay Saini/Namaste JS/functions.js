@@ -26,6 +26,9 @@ var c = function xyz(){
     console.log(xyz);
 }
 
-//first class functions
-//functions can be passed as a parameter to another function, and we can return a function from a function
+//first class functions or first class citizens
+//functions can be passed as a arguments to another function, and we can return a function from a function
 //this ability to use fn as a value in JS is called as first class function
+
+//Higher order function
+//A function that takes a function as an argument or returns a function is called higher order function
